@@ -1,0 +1,36 @@
+.App {
+  width: 100wh;
+  height: 100vh;
+}
+
+.AppContainer {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 50px;
+}
+
+.firstHeader {
+  text-align: left;
+  font-size: 1.5em !important;
+}
+
+.header {
+  padding-top: 2%;
+  font-size: 1em;
+  display: block;
+  text-decoration: none;
+  color: black;
+  margin-right: 50px;
+  text-align: right;
+}
+
+.title {
+  margin-top: 40vh;
+  transform: translateY(-50%);
+  font-size: 4em;
+  letter-spacing: 2px;
+}
+
+.container {
+  margin-top: 10vh;
+}
