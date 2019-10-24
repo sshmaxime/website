@@ -8,6 +8,19 @@ import {
 import ReactCountryFlag from "react-country-flag";
 
 import "./App.css";
+import 'emoji-mart/css/emoji-mart.css'
+import { Emoji, getEmojiDataFromNative } from 'emoji-mart'
+import data from 'emoji-mart/data/all.json'
+import Grid from '@material-ui/core/Grid';
+
+import termonitorImg from './projects_img/termonitor.png'
+import shImg from './projects_img/42sh.png'
+import lemIPCImg from './projects_img/lemIPC.jpg'
+import gauntletImg from './projects_img/Gauntlet.png'
+import pacmanImg from './projects_img/pacman.jpg'
+import continuedImg from './projects_img/continued.jpg'
+
+import ReactTypingEffect from 'react-typing-effect';
 
 function App() {
   return (
@@ -54,6 +67,9 @@ function App() {
           </Switch>
         </div>
       </div>
+      <div className="App1">
+        Sorry, the mobile version is not done yet and probably never will because I'm not working on it. Please come back on your computer :)
+      </div>
     </BrowserRouter>
   );
 }
@@ -61,7 +77,10 @@ function App() {
 function Home() {
   return (
     <div className="title">
-      I'm a software engineer.
+      <ReactTypingEffect
+        speed={100}
+        text={["I'm a software engineer.", "Pretty cool effect huh ?", "Life is cool !", "Over."]}
+      />
     </div>
   )
 }
@@ -116,7 +135,7 @@ function WorkContainer(props) {
     <div className="containerContent">
       <div style={{ margin: 0, padding: 0, display: "flex", "justifyContent": "space-between" }}>
         <div>
-          <div className="schoolName">
+          <div className="companyName" onClick={() => window.open(props.link)}>
             {props.companyName}
           </div>
           <div className="diplomaName">
@@ -125,7 +144,12 @@ function WorkContainer(props) {
           <div className="detailsJob">
             {props.details.map((item, id, map) => {
               return (
-                id !== map.length - 1 ? item + ", " : item
+                <React.Fragment key={id}>
+                  <span>
+                    <b style={{ backgroundColor: "#e6e6e6", paddingLeft: "2px", paddingRight: "2px" }}>{item}</b>
+                  </span>
+                  {id !== map.length - 1 ? ", " : ""}
+                </React.Fragment>
               )
             })}
           </div>
@@ -142,7 +166,7 @@ function WorkContainer(props) {
           {" "}
           -
           {" "}
-          {props.date[1]}
+          <b>{props.date[1]}</b>
         </div>
       </div>
     </div>
@@ -156,21 +180,99 @@ function Work() {
         <span className="containerTitleNumber">01.</span>
         WORK EXPERIENCE
       </div>
-      <WorkContainer companyName="Adagio.io" position="BACKEND DEVELOPER" countryCode="fr" date={["1 month", "present"]} details={["Go", "C++", "Tensorflow", "RocksDB", "Terraform", "Packer", "GRPC"]} />
-      <WorkContainer companyName="ChainHero" position="BLOCKCHAIN DEVELOPER" countryCode="fr" date={["8 months", "2018"]} details={["Go", "Blockchain", "Hyperledger Fabric", "Docker"]} />
-      <WorkContainer companyName="StartUp Nursery" position="FULLSTACK DEVELOPER" countryCode="fr" date={["2 months", "2017"]} details={["JS", "NodeJS", "Angular", "CSS"]} />
-      <WorkContainer companyName="Fred & Farid" position="WEB DEVELOPER" countryCode="cn" date={["4 months", "2016"]} details={["JS", "NodeJS", "CSS"]} />
+      <WorkContainer companyName="Adagio.io" link="http://adagio.io" position="BACKEND DEVELOPER" countryCode="fr" date={["Sept. 2019", "present"]} details={["Go", "C++", "Tensorflow", "RocksDB", "Terraform", "Packer", "GRPC"]} />
+      <WorkContainer companyName="ChainHero" link="http://chainhero.io" position="BLOCKCHAIN DEVELOPER" countryCode="fr" date={["8 months", "2018"]} details={["Go", "Blockchain", "Hyperledger Fabric", "Docker"]} />
+      <WorkContainer companyName="StartUp Nursery" link="https://startupnursery.io" position="FULLSTACK DEVELOPER" countryCode="fr" date={["2 months", "2017"]} details={["JS", "NodeJS", "Angular", "CSS"]} />
+      <WorkContainer companyName="Fred & Farid" link="https://www.ffcreative.com" position="WEB DEVELOPER" countryCode="cn" date={["4 months", "2016"]} details={["JS", "NodeJS", "CSS"]} />
     </div>
   )
 }
 
-function Projects() {
+function ProjectContainer(props) {
+  return (
+    <div className="containerContent">
+      <Grid container spacing={4}>
+        {props.projects.map((project, id) => {
+          const isProjectLink = project.link !== ""
+          return (
+            <Grid key={id} item xs={12} md={6}>
+              <div className="projectContainer" onClick={() => isProjectLink ? window.open(project.link) : null}>
+                <img alt="" className="projectImg" src={project.img} />
+                <div className="projectInfo">
+                  <div className="projectName">{project.name}</div>
+                  <div className="projectDescription">{project.description}</div>
+                  <div className="projectTechno">
+                    {project.techno.map((item, id, map) => {
+                      return (
+                        <React.Fragment key={id}>
+                          <span>
+                            <b style={{ backgroundColor: "#e6e6e6", paddingLeft: "2px", paddingRight: "2px", fontSize: "0.8em" }}>{item}</b>
+                          </span>
+                          {id !== map.length - 1 ? "/" : ""}
+                        </React.Fragment>
+                      )
+                    })}
+                  </div>
+                </div>
+              </div>
+            </Grid>
+          )
+        })}
+      </Grid>
+    </div>
+  )
+}
+
+function Projects(props) {
   return (
     <div className="container">
       <div className="containerTitle">
         <span className="containerTitleNumber">02.</span>
         PROJECTS
       </div>
+      <ProjectContainer projects={[
+        {
+          name: "Termonitor",
+          description: "App to monitor your mining farm.",
+          link: "https://github.com/MaximeAubanel/termonitor",
+          img: termonitorImg,
+          techno: ["ReactJS", "ElectronJS", "JavaScript", "MaterialUI"]
+        }, {
+          name: "42sh",
+          description: "A shell reproduction.",
+          link: "https://github.com/MaximeAubanel/42sh",
+          img: shImg,
+          techno: ["C", "Ncurses"]
+        },
+        {
+          name: "lemIPC",
+          description: "AI fighting through IPC.",
+          link: "https://github.com/MaximeAubanel/42sh",
+          img: lemIPCImg,
+          techno: ["C", "CSFML", "Semaphore", "Shared memory", "MsgQ"]
+        },
+        {
+          name: "IndieStudio",
+          description: "Homemade Gauntlet.",
+          link: "https://github.com/MaximeAubanel/IndieStudio",
+          img: gauntletImg,
+          techno: ["C++", "C", "Irrlich", "3D"]
+        },
+        {
+          name: "Pacman/Snake",
+          description: "Packman & Snake in 3 Graphic Lib.",
+          link: "https://github.com/MaximeAubanel/Snake-Pacman",
+          img: pacmanImg,
+          techno: ["C++", "C", "OpenGL", "SFML", "Ncurses"]
+        },
+        {
+          name: "To be continued.",
+          description: "",
+          link: "",
+          img: continuedImg,
+          techno: []
+        },
+      ]} />
     </div>
   )
 }
@@ -182,7 +284,53 @@ function Contact() {
         <span className="containerTitleNumber">03.</span>
         CONTACT
       </div>
-    </div>
+      <div className="containerContent">
+        <div style={{ display: "table" }}>
+          <Emoji
+            set={'apple'}
+            emoji={getEmojiDataFromNative('👨🏼‍💻', 'apple', data)}
+            skin={getEmojiDataFromNative('👨🏼‍💻', 'apple', data).skin || 1}
+            size={30}
+          />
+          <span style={{ display: "table-cell", verticalAlign: "middle", paddingLeft: "15px" }}>
+            Maxime Aubanel
+          </span>
+        </div>
+        <div style={{ display: "table" }}>
+          <Emoji
+            set={'apple'}
+            emoji={getEmojiDataFromNative('📍', 'apple', data)}
+            skin={getEmojiDataFromNative('📍', 'apple', data).skin || 1}
+            size={30}
+          />
+          <span style={{ display: "table-cell", verticalAlign: "middle", paddingLeft: "15px" }}>
+            Paris, FRANCE
+          </span>
+        </div>
+        <div style={{ display: "table" }}>
+          <Emoji
+            set={'apple'}
+            emoji={getEmojiDataFromNative('📩', 'apple', data)}
+            skin={getEmojiDataFromNative('📩', 'apple', data).skin || 1}
+            size={30}
+          />
+          <span style={{ display: "table-cell", verticalAlign: "middle", paddingLeft: "15px" }}>
+            maximeauba@gmail.com
+        </span>
+        </div>
+        <div style={{ display: "table" }}>
+          <Emoji
+            set={'apple'}
+            emoji={getEmojiDataFromNative('📞', 'apple', data)}
+            skin={getEmojiDataFromNative('📞', 'apple', data).skin || 1}
+            size={30}
+          />
+          <span style={{ display: "table-cell", verticalAlign: "middle", paddingLeft: "15px" }}>
+            +33 6 48 26 82 27
+        </span>
+        </div>
+      </div>
+    </div >
   )
 }
 
