@@ -1,15 +1,3 @@
-@media only screen and (max-width: 600px) {
-  .App {
-    display: none;
-  }
-}
-
-@media only screen and (min-width: 600px) {
-  .App1 {
-    display: none;
-  }
-}
-
 .App {
   width: 100wh;
   height: 100vh;
@@ -57,7 +45,7 @@
 .title {
   margin-top: 40vh;
   transform: translateY(-50%);
-  font-size: 4em;
+  font-size: 3.5em;
   letter-spacing: 2px;
 }
 

@@ -67,9 +67,6 @@ function App() {
           </Switch>
         </div>
       </div>
-      <div className="App1">
-        Sorry, the mobile version is not done yet and probably never will because I'm not working on it. Please come back on your computer :)
-      </div>
     </BrowserRouter>
   );
 }
