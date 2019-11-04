@@ -178,9 +178,9 @@ function Work() {
         WORK EXPERIENCE
       </div>
       <WorkContainer companyName="Adagio.io" link="http://adagio.io" position="SOFTWARE ENGINEER" countryCode="fr" date={["Sept. 2019", "present"]} details={["Go", "C++", "Tensorflow", "RocksDB", "Terraform", "Packer", "GRPC"]} />
-      <WorkContainer companyName="ChainHero" link="http://chainhero.io" position="BLOCKCHAIN DEVELOPER" countryCode="fr" date={["8 months", "2018"]} details={["Go", "Blockchain", "Hyperledger Fabric", "Docker"]} />
-      <WorkContainer companyName="StartUp Nursery" link="https://startupnursery.io" position="FULLSTACK DEVELOPER" countryCode="fr" date={["2 months", "2017"]} details={["JS", "NodeJS", "Angular", "CSS"]} />
-      <WorkContainer companyName="Fred & Farid" link="https://www.ffcreative.com" position="FULLSTACK DEVELOPER" countryCode="cn" date={["4 months", "2016"]} details={["JS", "NodeJS", "CSS"]} />
+      <WorkContainer companyName="ChainHero" link="http://chainhero.io" position="BLOCKCHAIN ENGINEER" countryCode="fr" date={["8 months", "2018"]} details={["Go", "Blockchain", "Hyperledger Fabric", "Docker"]} />
+      <WorkContainer companyName="StartUp Nursery" link="https://startupnursery.io" position="FULLSTACK ENGINEER" countryCode="fr" date={["2 months", "2017"]} details={["JS", "NodeJS", "Angular", "CSS"]} />
+      <WorkContainer companyName="Fred & Farid" link="https://www.ffcreative.com" position="SOFTWARE ENGINEER INTERN" countryCode="cn" date={["4 months", "2016"]} details={["JS", "NodeJS", "CSS"]} />
     </div>
   )
 }
