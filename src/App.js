@@ -9,8 +9,6 @@ import ReactCountryFlag from "react-country-flag";
 
 import "./App.css";
 import 'emoji-mart/css/emoji-mart.css'
-import { Emoji, getEmojiDataFromNative } from 'emoji-mart'
-import data from 'emoji-mart/data/all.json'
 import Grid from '@material-ui/core/Grid';
 
 import termonitorImg from './projects_img/termonitor.png'
@@ -283,45 +281,33 @@ function Contact() {
       </div>
       <div className="containerContent">
         <div style={{ display: "table" }}>
-          <Emoji
-            set={'apple'}
-            emoji={getEmojiDataFromNative('👨🏼‍💻', 'apple', data)}
-            skin={getEmojiDataFromNative('👨🏼‍💻', 'apple', data).skin || 1}
-            size={30}
-          />
+          <span style={{ display: "table-cell", verticalAlign: "middle", paddingLeft: "15px", fontSize: "30px" }}>
+            👨🏼‍💻
+          </span>
           <span style={{ display: "table-cell", verticalAlign: "middle", paddingLeft: "15px" }}>
             Maxime Aubanel
           </span>
         </div>
         <div style={{ display: "table" }}>
-          <Emoji
-            set={'apple'}
-            emoji={getEmojiDataFromNative('📍', 'apple', data)}
-            skin={getEmojiDataFromNative('📍', 'apple', data).skin || 1}
-            size={30}
-          />
+          <span style={{ display: "table-cell", verticalAlign: "middle", paddingLeft: "15px", fontSize: "30px" }}>
+            📍
+          </span>
           <span style={{ display: "table-cell", verticalAlign: "middle", paddingLeft: "15px" }}>
             Paris, FRANCE
           </span>
         </div>
         <div style={{ display: "table" }}>
-          <Emoji
-            set={'apple'}
-            emoji={getEmojiDataFromNative('📩', 'apple', data)}
-            skin={getEmojiDataFromNative('📩', 'apple', data).skin || 1}
-            size={30}
-          />
+          <span style={{ display: "table-cell", verticalAlign: "middle", paddingLeft: "15px", fontSize: "30px" }}>
+            📩
+          </span>
           <span style={{ display: "table-cell", verticalAlign: "middle", paddingLeft: "15px" }}>
             maximeauba@gmail.com
         </span>
         </div>
         <div style={{ display: "table" }}>
-          <Emoji
-            set={'apple'}
-            emoji={getEmojiDataFromNative('📞', 'apple', data)}
-            skin={getEmojiDataFromNative('📞', 'apple', data).skin || 1}
-            size={30}
-          />
+          <span style={{ display: "table-cell", verticalAlign: "middle", paddingLeft: "15px", fontSize: "30px" }}>
+            📞
+          </span>
           <span style={{ display: "table-cell", verticalAlign: "middle", paddingLeft: "15px" }}>
             +33 6 48 26 82 27
         </span>
