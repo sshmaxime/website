@@ -97,11 +97,12 @@ function EducationContainer(props) {
         </div>
         <div className="date">
           <ReactCountryFlag
-            styleProps={{
+            style={{
               paddingRight: "20px",
               fontSize: "2em"
             }}
-            code={props.countryCode}
+            svg
+            countryCode={props.countryCode}
           />
           {props.date}
         </div>
@@ -151,11 +152,12 @@ function WorkContainer(props) {
         </div>
         <div className="date">
           <ReactCountryFlag
-            styleProps={{
+            style={{
               paddingRight: "20px",
               fontSize: "2em"
             }}
-            code={props.countryCode}
+            svg
+            countryCode={props.countryCode}
           />
           {props.date[0]}
           {" "}

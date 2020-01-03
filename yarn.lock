@@ -8160,7 +8160,7 @@ prompts@^2.0.1:
     kleur "^3.0.3"
     sisteransi "^1.0.3"
 
-prop-types@^15.5.8, prop-types@^15.6.0, prop-types@^15.6.2, prop-types@^15.7.2:
+prop-types@^15.5.10, prop-types@^15.5.8, prop-types@^15.6.0, prop-types@^15.6.2, prop-types@^15.7.2:
   version "15.7.2"
   resolved "https://registry.yarnpkg.com/prop-types/-/prop-types-15.7.2.tgz#52c41e75b8c87e72b9d9360e0206b99dcbffa6c5"
   integrity sha512-8QQikdH7//R2vurIJSutZ1smHYTcLpRWEOlHnzcWHmBYrOGUysKwSsrC89BCiFj3CbrfJ/nXFdJepOVrY1GCHQ==
@@ -8336,10 +8336,10 @@ react-app-polyfill@^1.0.4:
     regenerator-runtime "0.13.3"
     whatwg-fetch "3.0.0"
 
-react-country-flag@^1.1.0:
-  version "1.1.0"
-  resolved "https://registry.yarnpkg.com/react-country-flag/-/react-country-flag-1.1.0.tgz#c30033b00c195d58776a9d522187b5e97add2963"
-  integrity sha512-Z6LW4U+qeH0X0d1o02aZUevRyk5Z4ZQmp1ResWkh/4z6kvjBqg9otYyxBAUtvElpgfQiP61cSZ2/XZ+pLjBPDw==
+react-country-flag@^2.0.0:
+  version "2.0.1"
+  resolved "https://registry.yarnpkg.com/react-country-flag/-/react-country-flag-2.0.1.tgz#1028e71cd456b9685adc0447e148b79770c04b4e"
+  integrity sha512-cZQp+MTQUfSkI++ypDJU6PNgNU2K6Z/9htO4ct4HzvWAs19DoMbnvhzyK31lkBnW1vfx9OkMwskxuaYbEcFjLw==
 
 react-dev-utils@^9.1.0:
   version "9.1.0"
@@ -8397,6 +8397,13 @@ react-error-overlay@^6.0.3:
   version "6.0.3"
   resolved "https://registry.yarnpkg.com/react-error-overlay/-/react-error-overlay-6.0.3.tgz#c378c4b0a21e88b2e159a3e62b2f531fd63bf60d"
   integrity sha512-bOUvMWFQVk5oz8Ded9Xb7WVdEi3QGLC8tH7HmYP0Fdp4Bn3qw0tRFmr5TW6mvahzvmrK4a6bqWGfCevBflP+Xw==
+
+react-flags@^0.1.18:
+  version "0.1.18"
+  resolved "https://registry.yarnpkg.com/react-flags/-/react-flags-0.1.18.tgz#d763d7e802692a08e15d1802a51933a173f388fd"
+  integrity sha512-fa8D6DIZS6DWRqLcmKGIHVT13r4viHAfIRth9cFO7cDyxEPfTBbZei6p0Xeao6of4C/K4XU/j35aMjPC15ePIg==
+  dependencies:
+    prop-types "^15.5.10"
 
 react-is@^16.6.0, react-is@^16.7.0, react-is@^16.8.1, react-is@^16.8.4, react-is@^16.8.6:
   version "16.11.0"
