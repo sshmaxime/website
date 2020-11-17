@@ -1,144 +1,74 @@
-.App {
-  width: 100wh;
-  height: 100vh;
+html {
+  width: 100%;
 }
 
-.AppContainer {
-  max-width: 1300px;
-  margin: 0 auto;
-  padding: 50px;
+
+.Container {
+  position: absolute;
+  top: 50%;  
+  left: 50%; 
+  transform: translate(-50%, -60%); 
+  width: 300px;
 }
 
-.firstHeader {
-  text-decoration: none;
-  color: black;
-  text-align: left;
-  font-size: 1.5em !important;
-  font-weight: 900;
+.FirstPart {
+  margin-bottom: 70px;
 }
 
-.header {
-  font-size: 1em;
-  display: block;
-  text-decoration: none;
-  color: black;
-  margin-right: 50px;
-  text-align: right;
-}
-
-.headerLast {
-  font-size: 1em;
-  display: block;
-  text-decoration: none;
-  color: black;
-  text-align: right;
-}
-
-.header:hover {
-  color: red;
-}
-
-.headerLast:hover {
-  color: red;
-}
-
-.title {
-  margin-top: 40vh;
-  transform: translateY(-50%);
-  font-size: 3.5em;
-  letter-spacing: 2px;
-}
-
-.container {
-  margin-top: 10vh;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
-  padding: 20px;
-  border-radius: 7px;
-}
-
-.containerTitle {
-  letter-spacing: 4px;
-  font-weight: 900;
-  padding-bottom: 5px;
-  border-bottom: solid 1px black;
+.Title {
   font-size: 2em;
+  font-weight: 900;
+  text-align: left;
 }
 
-.containerTitleNumber {
-  letter-spacing: -3px;
-  padding-right: 15px;
-  color: red;
+.Title2 {
+  text-align: left;
 }
 
-.containerContent {
-  padding-top: 15px;
-  padding-bottom: 20px;
-  font-size: 1em;
+.Subtitle {
+  color: grey;
+  text-align: right;
+  margin-top: 10px;
+  font-style: italic;
 }
 
-.schoolName {
-  font-size: 1.4em;
-  line-height: 30px;
-  letter-spacing: -2px;
-  font-weight: bold;
+.TopicTitle {
+  display: inline-block;
+  padding: 5px;
+  margin: 5px;
 }
 
-.companyName {
-  font-size: 1.4em;
-  line-height: 30px;
-  letter-spacing: -2px;
-  font-weight: bold;
+.TopicTitle:hover {
+  background-color: red;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.Icons {
+  margin-top: 10px;
+  padding: 10px;
+}
+
+.Icon:hover {
   cursor: pointer;
 }
 
-.diplomaName {
-  font-size: 1.1em;
+.Contact {
+  margin-top: 30px;
+  padding: 10px;
+  font-size: 0.95em;
+}
+
+.Block {
+  display: inline-block;
+}
+
+.head {
+  font-weight: 900;
   font-style: italic;
-  letter-spacing: 0px;
-  color: red;
+  width: 200px;
 }
 
-.details {
-  font-style: oblique;
-}
-
-.detailsJob {
-  /* font-weight: bold; */
-}
-
-.projectContainer {
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
-  border-radius: 7px;
-  height: 150px;
-  cursor: pointer;
-  transition: 0.5s;
-}
-
-.projectContainer:hover {
-  transform: scale(1.03);
-}
-
-.projectImg {
-  height: 100%;
-  border-radius: 7px;
-  float: left;
-  width: 180px;
-}
-
-.projectName {
-  font-weight: bold;
-  padding-bottom: 20px;
-  font-size: 1.2em;
-  color: red;
-}
-
-.projectInfo {
-  height: 100%;
-  overflow: auto;
-  padding: 15px;
-}
-
-.projectDescription {
-  font-style: italic;
-  padding-bottom: 15px;
+.tail {
+  margin-left: 10px;
 }
