@@ -1,0 +1,33 @@
+.FirstPart {
+  margin-bottom: 70px;
+}
+
+.Title {
+  font-size: 2em;
+  font-weight: 900;
+  text-align: left;
+}
+
+.Title2 {
+  text-align: left;
+}
+
+.Subtitle {
+  color: grey;
+  text-align: right;
+  margin-top: 10px;
+  font-style: italic;
+}
+
+.TopicTitle {
+  display: inline-block;
+  padding: 5px;
+  margin: 5px;
+  color: black;
+}
+
+.TopicTitle:hover {
+  background-color: red;
+  cursor: pointer;
+  border-radius: 4px;
+}
