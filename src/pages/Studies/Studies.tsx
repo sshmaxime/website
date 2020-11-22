@@ -22,13 +22,6 @@ const H5 = styled.div<{
   padding-bottom: 10px;
 `
 
-const H6 = styled.div<{
-}>`
-  font-size: 0.8em;
-  padding-bottom: 7px;
-  font-style: italic;
-`
-
 const Study: FunctionComponent<{
   title: {
     degree: string,

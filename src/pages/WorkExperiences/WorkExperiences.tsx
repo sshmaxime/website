@@ -12,7 +12,7 @@ const TfImg = "https://img.shields.io/badge/-Tensorflow-yellow"
 const HfImg = "https://img.shields.io/badge/-Hyperledger Fabric-orange"
 const ReactImg = "https://img.shields.io/badge/-ReactJs-61DBFB"
 const JsImg = "https://img.shields.io/badge/-Javascript-yellow"
-const TsImg = "https://img.shields.io/badge/-Typescript-cyan"
+// const TsImg = "https://img.shields.io/badge/-Typescript-cyan"
 
 const Div = styled.div<{
 }>`
@@ -23,7 +23,7 @@ const H4 = styled.div<{
 }>`
   font-weight: 900;
   margin-bottom: 4px;
-  font-size: 1em;
+  font-size: 1.1em;
   border-radius: 4px;
 `
 
@@ -53,7 +53,7 @@ const WorkExperience: FunctionComponent<{
 }> = ({ title, time, year, short, icons, company }) => {
   return (
     <Div>
-      <H4><span style={{ color: "#FAE232", backgroundColor: "black", padding: "3px", borderRadius: "5px" }}>{title}</span>&nbsp;Software Engineer</H4>
+      <H4><span style={{ color: "red", borderRadius: "5px" }}>{title}</span>&nbsp;Software Engineer</H4>
       <H5><span style={{ fontWeight: 700 }}>{year}</span>, {time} - <span style={{ cursor: "pointer", borderBottom: "1px solid black", paddingBottom: "1px" }} onClick={() => { window.open(company.url) }}>{company.name}</span></H5>
       <H6>{short}</H6>
 
