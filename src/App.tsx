@@ -11,7 +11,7 @@ import Studies from "./pages/Studies/Studies";
 import About from "./pages/About/About";
 import Home from "./pages/Home/Home";
 import Projects from "./pages/Projects/Projects";
-import WorkExperience from "./pages/WorkExperience/WorkExperience";
+import WorkExperiences from "./pages/WorkExperiences/WorkExperiences";
 
 const App: FunctionComponent = () => {
   return (
@@ -22,8 +22,8 @@ const App: FunctionComponent = () => {
           <Studies />
         </Route>
 
-        <Route path="/workexperience">
-          <WorkExperience />
+        <Route path="/WorkExperiences">
+          <WorkExperiences />
         </Route>
 
         <Route path="/projects">

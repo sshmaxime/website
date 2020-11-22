@@ -2,16 +2,16 @@ import React, { FunctionComponent } from "react";
 import { Link } from "react-router-dom";
 import "./Home.css";
 
-import { Page } from "../../components/page"
+import Page from "../../components/page"
 import { Footer } from "../../footer/footer";
 
 const Home: FunctionComponent = () => {
   return (
-    <Page>
+    <Page width="350px" home>
       <div className="FirstPart">
         <div className="Title">Maxime Aubanel</div>
         <div className="Title2">Software Engineer</div>
-        <div className="Subtitle">Less is more</div>
+        <div className="Subtitle">Less is more.</div>
       </div>
 
 
@@ -24,8 +24,8 @@ const Home: FunctionComponent = () => {
         </div>
 
         <div className="Topic">
-          <Link to="/workexperience">
-            <h2 className="TopicTitle">Work Experience</h2>
+          <Link to="/workexperiences">
+            <h2 className="TopicTitle">Work Experiences</h2>
           </Link>
         </div>
 
@@ -36,7 +36,7 @@ const Home: FunctionComponent = () => {
         </div>
 
         <div className="Topic">
-          <Link to="/aboutme">
+          <Link to="/about">
             <h2 className="TopicTitle">About Me</h2>
           </Link>
         </div>

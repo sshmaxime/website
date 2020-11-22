@@ -1,11 +1,12 @@
 import React, { FunctionComponent } from "react";
+import Page from "../../components/page";
 import "./Projects.css";
 
 const Projects: FunctionComponent = () => {
   return (
-    <div className="nop">
-      Hello
-    </div >
+    <Page width="350px">
+      Coming soon.
+    </Page >
   )
 }
 
