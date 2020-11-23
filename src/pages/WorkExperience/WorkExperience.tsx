@@ -1,7 +1,7 @@
 import React, { FunctionComponent } from "react";
 import Page from "../../components/page"
 import styled from 'styled-components'
-import "./WorkExperiences.css";
+import "./WorkExperience.css";
 
 const CppImg = "https://img.shields.io/badge/-C++-ff69b4"
 const RosImg = "https://img.shields.io/badge/-ROS-brightgreen"
@@ -16,7 +16,7 @@ const JsImg = "https://img.shields.io/badge/-Javascript-yellow"
 
 const Div = styled.div<{
 }>`
-  padding-bottom: 30px;
+  padding-bottom: 10px;
 `
 
 const H4 = styled.div<{
@@ -30,13 +30,13 @@ const H4 = styled.div<{
 const H5 = styled.div<{
 }>`
   font-size: 0.9em;
-  padding-bottom: 10px;
+  padding-bottom: 5px;
 `
 
 const H6 = styled.div<{
 }>`
   font-size: 0.8em;
-  padding-bottom: 7px;
+  padding-bottom: 5px;
   font-style: italic;
 `
 
@@ -53,25 +53,29 @@ const WorkExperience: FunctionComponent<{
 }> = ({ title, time, year, short, icons, company }) => {
   return (
     <Div>
-      <H4><span style={{ color: "red", borderRadius: "5px" }}>{title}</span>&nbsp;Software Engineer</H4>
+      <H4><span style={{ fontSize: "0.9em", color: "#FAE232", backgroundColor: "black", fontFamily: 'Source Code Pro', padding: "3px", borderRadius: "5px", letterSpacing: "-1px" }}>{title}</span>&nbsp;Software Engineer</H4>
       <H5><span style={{ fontWeight: 700 }}>{year}</span>, {time} - <span style={{ cursor: "pointer", borderBottom: "1px solid black", paddingBottom: "1px" }} onClick={() => { window.open(company.url) }}>{company.name}</span></H5>
       <H6>{short}</H6>
 
-      {
+      {/* {
         icons.map((icon: string) => (
           <img key={icon} src={icon} style={{ marginRight: "5px" }} height="20px" alt="" />
         ))
-      }
+      } */}
 
     </Div >
   )
 }
 
-const WorkExperiences: FunctionComponent = () => {
+const Career: FunctionComponent = () => {
   return (
     <Page width="350px">
+
+      <div style={{ letterSpacing: "-0.5px", fontWeight: 900, padding: "10px", borderBottom: "1px solid black", marginBottom: "20px", marginRight: "100px", fontSize: "1.3em" }}>
+        WORK EXPERIENCE
+      </div>
       <WorkExperience
-        title="Robotics"
+        title="ROBOTICS"
         time="7 months"
         year="2020"
         company={{ name: "Rigi.Tech", url: "https://www.rigi.tech/" }}
@@ -79,7 +83,7 @@ const WorkExperiences: FunctionComponent = () => {
         icons={[CppImg, RosImg, GoImg, DockerImg, DevopsImg]} />
 
       <WorkExperience
-        title="Backend"
+        title="BACKEND"
         time="7 months"
         year="2019"
         company={{ name: "Adagio.io", url: "https://adagio.io/" }}
@@ -87,7 +91,7 @@ const WorkExperiences: FunctionComponent = () => {
         icons={[GoImg, DockerImg, CppImg, TfImg]} />
 
       <WorkExperience
-        title="Blockchain"
+        title="BLOCKCHAIN"
         time="8 months"
         year="2018"
         company={{ name: "Chainhero.io", url: "https://chainhero.io/" }}
@@ -95,7 +99,7 @@ const WorkExperiences: FunctionComponent = () => {
         icons={[GoImg, DockerImg, HfImg]} />
 
       <WorkExperience
-        title="Frontend"
+        title="FRONTEND"
         time="4 months"
         year="2016"
         company={{ name: "Fred&Farid", url: "https://fredfarid.com/" }}
@@ -105,4 +109,6 @@ const WorkExperiences: FunctionComponent = () => {
   )
 }
 
-export default WorkExperiences;
+
+
+export default Career;

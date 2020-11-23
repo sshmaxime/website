@@ -6,23 +6,23 @@ import {
   Route,
 } from "react-router-dom";
 
-import Studies from "./pages/Studies/Studies";
 import About from "./pages/About/About";
+import Education from "./pages/Education/Education";
 import Home from "./pages/Home/Home";
 import Projects from "./pages/Projects/Projects";
-import WorkExperiences from "./pages/WorkExperiences/WorkExperiences";
+import WorkExperience from "./pages/WorkExperience/WorkExperience";
 
 const App: FunctionComponent = () => {
   return (
     <Router>
       <Switch>
 
-        <Route path="/studies">
-          <Studies />
+        <Route path="/education">
+          <Education />
         </Route>
 
-        <Route path="/WorkExperiences">
-          <WorkExperiences />
+        <Route path="/workexperience">
+          <WorkExperience />
         </Route>
 
         <Route path="/projects">

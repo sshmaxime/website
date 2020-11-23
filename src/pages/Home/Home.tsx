@@ -9,7 +9,7 @@ const Home: FunctionComponent = () => {
   return (
     <Page width="350px" home>
       <div className="FirstPart">
-        <div className="Title">Maxime Aubanel</div>
+        <div className="Title">MAXIME AUBANEL</div>
         <div className="Title2">Software Engineer</div>
         <div className="Subtitle">Less is more.</div>
       </div>
@@ -18,26 +18,26 @@ const Home: FunctionComponent = () => {
       <div className="Topics">
 
         <div className="Topic">
-          <Link to="/studies">
-            <h2 className="TopicTitle">Studies</h2>
+          <Link to="/education">
+            <h2 className="TopicTitle">EDUCATION</h2>
           </Link>
         </div>
 
         <div className="Topic">
-          <Link to="/workexperiences">
-            <h2 className="TopicTitle">Work Experiences</h2>
+          <Link to="/workexperience">
+            <h2 className="TopicTitle">WORK EXPERIENCE</h2>
           </Link>
         </div>
 
         <div className="Topic">
           <Link to="/projects">
-            <h2 className="TopicTitle">Projects</h2>
+            <h2 className="TopicTitle">PROJECTS</h2>
           </Link>
         </div>
 
         <div className="Topic">
           <Link to="/about">
-            <h2 className="TopicTitle">About Me</h2>
+            <h2 className="TopicTitle">ABOUT ME</h2>
           </Link>
         </div>
       </div>

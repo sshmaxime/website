@@ -18,10 +18,7 @@ const OuterDiv = styled.div<{
 const Div = styled.div<{
   width: string;
 }>`
-  position: relative;
-  top: 50%;  
-  left: 50%; 
-  transform: translate(-50%, -50%); 
+  margin-top: 100px;
   width: ${props => props.width};
 `
 
