@@ -6,7 +6,6 @@ import {
   Route,
 } from "react-router-dom";
 
-import About from "./pages/About/About";
 import Education from "./pages/Education/Education";
 import Home from "./pages/Home/Home";
 import Projects from "./pages/Projects/Projects";
@@ -27,10 +26,6 @@ const App: FunctionComponent = () => {
 
         <Route path="/projects">
           <Projects />
-        </Route>
-
-        <Route path="/about">
-          <About />
         </Route>
 
         <Route path="/">

@@ -34,12 +34,6 @@ const Home: FunctionComponent = () => {
             <h2 className="TopicTitle">PROJECTS</h2>
           </Link>
         </div>
-
-        <div className="Topic">
-          <Link to="/about">
-            <h2 className="TopicTitle">ABOUT ME</h2>
-          </Link>
-        </div>
       </div>
       <Footer />
     </Page>

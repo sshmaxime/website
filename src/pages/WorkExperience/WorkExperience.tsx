@@ -53,16 +53,9 @@ const WorkExperience: FunctionComponent<{
 }> = ({ title, time, year, short, icons, company }) => {
   return (
     <Div>
-      <H4><span style={{ fontSize: "0.9em", color: "#FAE232", backgroundColor: "black", fontFamily: 'Source Code Pro', padding: "3px", borderRadius: "5px", letterSpacing: "-1px" }}>{title}</span>&nbsp;Software Engineer</H4>
-      <H5><span style={{ fontWeight: 700 }}>{year}</span>, {time} - <span style={{ cursor: "pointer", borderBottom: "1px solid black", paddingBottom: "1px" }} onClick={() => { window.open(company.url) }}>{company.name}</span></H5>
+      <H4><span style={{ fontSize: "1.1em", color: "red", fontFamily: 'Source Code Pro', letterSpacing: "-1px" }}>{title}</span>&nbsp;Software Engineer</H4>
+      <H5><span style={{ fontWeight: 700 }}>{year}</span>, {time} - <span style={{ fontStyle: "italic", cursor: "pointer", borderBottom: "1px solid black", paddingBottom: "1px" }} onClick={() => { window.open(company.url) }}>{company.name}</span></H5>
       <H6>{short}</H6>
-
-      {/* {
-        icons.map((icon: string) => (
-          <img key={icon} src={icon} style={{ marginRight: "5px" }} height="20px" alt="" />
-        ))
-      } */}
-
     </Div >
   )
 }
@@ -76,10 +69,10 @@ const Career: FunctionComponent = () => {
       </div>
       <WorkExperience
         title="ROBOTICS"
-        time="7 months"
+        time="8 months"
         year="2020"
         company={{ name: "Rigi.Tech", url: "https://www.rigi.tech/" }}
-        short="Architect and code from scratch in C++ the ROS ecosystem and communications layers for Rigi.Tech's drone fleet."
+        short="Architect and code from scratch the ROS ecosystem and communications layers for our drone fleet in C++."
         icons={[CppImg, RosImg, GoImg, DockerImg, DevopsImg]} />
 
       <WorkExperience
@@ -95,7 +88,7 @@ const Career: FunctionComponent = () => {
         time="8 months"
         year="2018"
         company={{ name: "Chainhero.io", url: "https://chainhero.io/" }}
-        short="Develop and code blockchain smart contract's and apps in Go with Hyperledger Fabric."
+        short="Develop and code blockchain smart contract's and apps with Hyperledger Fabric in Go."
         icons={[GoImg, DockerImg, HfImg]} />
 
       <WorkExperience
@@ -103,7 +96,7 @@ const Career: FunctionComponent = () => {
         time="4 months"
         year="2016"
         company={{ name: "Fred&Farid", url: "https://fredfarid.com/" }}
-        short="Design and code several Web Applications in React and Js."
+        short="Design and code several Web Applications in React/Js."
         icons={[ReactImg, DockerImg, JsImg]} />
     </Page >
   )

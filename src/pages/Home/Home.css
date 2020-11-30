@@ -29,8 +29,8 @@
 }
 
 .TopicTitle:hover {
-  background-color: black;
+  background-color: red;
   cursor: pointer;
-  border-radius: 4px;
-  color: #FAE232;
+  color: black;
+  transition: 0.5s;
 }

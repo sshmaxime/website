@@ -33,7 +33,7 @@ const Study: FunctionComponent<{
 }> = ({ title, year, location, school }) => {
   return (
     <Div>
-      <H4><span style={{ fontSize: "0.9em", color: "#FAE232", backgroundColor: "black", fontFamily: 'Source Code Pro', padding: "3px", borderRadius: "5px", letterSpacing: "-1px" }}>{title.degree}</span> Of <span>{title.field}</span></H4>
+      <H4><span style={{ fontSize: "1.1em", color: "red", fontFamily: 'Source Code Pro', letterSpacing: "-1px" }}>{title.degree}</span> Of <span style={{ fontStyle: "italic" }}>{title.field}</span></H4>
       <H5><span style={{ fontWeight: 900 }}>{school}</span> - <span style={{ fontStyle: "italic" }}>{year}</span></H5>
       <H5>📍 {location}</H5>
     </Div >
