@@ -12,8 +12,10 @@ type props = {
   url: string,
 }
 
-export const IconLink: FunctionComponent<props> = ({ src, url }) => {
+const IconLink: FunctionComponent<props> = ({ src, url }) => {
   return (
     <Div><img className="Icon" src={src} alt="" width={"30px"} onClick={() => { window.open(url) }} /></Div>
   )
 }
+
+export default IconLink

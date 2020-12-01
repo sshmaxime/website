@@ -1,5 +1,5 @@
 .FirstPart {
-  margin-bottom: 70px;
+  margin-bottom: 50px;
 }
 
 .Title {
@@ -10,6 +10,9 @@
 
 .Title2 {
   text-align: left;
+  font-weight: 700;
+  font-size: 1.1em;
+  letter-spacing: 1px;
 }
 
 .Subtitle {
@@ -21,8 +24,6 @@
 
 .TopicTitle {
   display: inline-block;
-  padding: 5px;
-  margin: 5px;
   color: black;
   font-size: 1.2em;
   font-weight: 900;

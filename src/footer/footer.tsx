@@ -1,11 +1,10 @@
 import React, { FunctionComponent } from 'react'
 import Github from "../assets/github.png"
 import styled from 'styled-components'
-import { IconLink } from '../components/iconLink'
+import IconLink from '../components/iconLink'
 
 const Div = styled.div`
   margin-top: 30px;
-  padding: 10px;
   font-size: 0.95em;
 `
 
